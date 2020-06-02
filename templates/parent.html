@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Menu</title>
+   <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+ </head>
+ <body>
+    <header>
+      <div class="container">
+        <h3 class="logo">Menu</h3>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('new_transaction') }}" target="_blank">Create New Transaction</a></li>
+            <li><a href="{{ url_for('mine') }}" target="_blank">Mine Block</a></li>
+            <li><a href="{{ url_for('full_chain') }}" target="_blank">View Blockchain</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+ </body>
+</html>
